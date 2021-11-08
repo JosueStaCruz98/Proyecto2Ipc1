@@ -1,3 +1,4 @@
+# Admin
 class Admin():
     nombre = ""
     usuario_name = ""
