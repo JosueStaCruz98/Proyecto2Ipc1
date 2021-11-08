@@ -26,7 +26,7 @@ async function mostrarContactos() {
      //innerHTML: modifica el contenido que se encuentra como hijo de la etiqueta especificada
     cuerpo.innerHTML = "";
 
-    let peticion = await fetch("http://localhost:4000/devolver_todo")
+    let peticion = await fetch("http://34.125.72.234:4000/devolver_todo")
     let respuesta = await peticion.json()
     console.log(respuesta)
     respuesta = respuesta.Data_User
@@ -62,7 +62,7 @@ async function mostrarContactos() {
 async function Buscar(){
     let nombreusuario = document.getElementById("n_usuario1").value
 
-    let peticion = await fetch("http://localhost:4000/buscar_usuario", {
+    let peticion = await fetch("http://34.125.72.234:4000/buscar_usuario", {
         method: "post",
         headers: {"Content-Type": 'application/json'},
         body: JSON.stringify({
@@ -83,7 +83,7 @@ async function Buscar(){
 async function eliminar() {
     let nombreusuario = document.getElementById("n_usuario1").value
 
-    let peticion = await fetch("http://localhost:4000/deleteuser", {
+    let peticion = await fetch("http://34.125.72.234:4000/deleteuser", {
         method: "delete",
         headers: {"Content-Type": 'application/json'},
         body: JSON.stringify({
@@ -111,7 +111,7 @@ async function editar() {
     let nombre = document.getElementById("nombre_2").value
     let genero = document.getElementById("genero_2").value
 
-    let peticion = await fetch("http://localhost:4000/actualizar" , {
+    let peticion = await fetch("http://34.125.72.234:4000/actualizar" , {
         method: "post",
         headers: {"Content-Type": 'application/json'},
         body: JSON.stringify({

@@ -23,7 +23,7 @@ async function crear(){
     if(password.length < 8 || contN == false || contC == false)
         alert("Por favor, verifique que su contraseña sea de al menos 8 caracteres, contenga un número y un símbolo");
     else{
-        let peticion = await fetch("http://localhost:4000/usuario", {
+        let peticion = await fetch("http://34.125.72.234:4000/usuario", {
         method: "put",
         headers: {"Content-Type": 'application/json'},
         body: JSON.stringify({
@@ -56,7 +56,7 @@ async function ini(){
     let password = document.getElementById("password1").value
 
 
-    let peticion = await fetch("http://localhost:4000/login", {
+    let peticion = await fetch("http://34.125.72.234:4000/login", {
         method: "post",
         headers: {"Content-Type": 'application/json'},
         body: JSON.stringify({
@@ -98,7 +98,7 @@ async function cargaMasiva(){
 
 async function enviarInfo(jsonCM){
     console.log(jsonCM)
-    const rawResponse = await fetch("http://localhost:4000/usuarios/carga-masiva", {
+    const rawResponse = await fetch("http://34.125.72.234:4000/usuarios/carga-masiva", {
         method: "POST",
         body: JSON.stringify({ "usuarios": jsonCM.usuarios }),
         headers: { "Content-Type": "application/json" },
@@ -118,7 +118,7 @@ async function crearAdmin(){
     let nombreusuario = "admin"
 
     
-    let peticion = await fetch("http://localhost:4000/usuario", {
+    let peticion = await fetch("http://34.125.72.234:4000/usuario", {
     method: "put",
     headers: {"Content-Type": 'application/json'},
     body: JSON.stringify({

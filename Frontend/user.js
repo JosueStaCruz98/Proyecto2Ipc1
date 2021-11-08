@@ -20,7 +20,7 @@ function mostrar(valor) {
 }
 //Función que permite buscar los datos del usuario y despues mostrarlos en los cuadros de texto
 async function Buscar(){
-    let peticion = await fetch("http://localhost:4000/buscar_usuario", {
+    let peticion = await fetch("http://34.125.72.234:4000/buscar_usuario", {
         method: "post",
         headers: {"Content-Type": 'application/json'},
         body: JSON.stringify({
@@ -45,7 +45,7 @@ async function editar() {
     let nombre = document.getElementById("nombre_edit").value
     let genero = document.getElementById("genero_edit").value
 
-    let peticion = await fetch("http://localhost:4000/actualizar" , {
+    let peticion = await fetch("http://34.125.72.234:4000/actualizar" , {
         method: "post",
         headers: {"Content-Type": 'application/json'},
         body: JSON.stringify({
